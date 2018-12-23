@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62EA9867-9173-4AAC-811D-3D04F244E79A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>OTC_DJ_Toolbox.My.MyApplication</StartupObject>
+    <RootNamespace>OTC_DJ_Toolbox</RootNamespace>
+    <AssemblyName>OTC DJ Toolbox</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>C4C7D4B94DB2B42F779085AB0B36F61F2D986476</ManifestCertificateThumbprint>
+    <ManifestKeyFile>OTC DJ Tools_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationIcon>laser.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <PublishUrl>ftp://offthechartradio.co.uk/files/djs/software/djtools/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.offthechartradio.co.uk/files/djs/software/djtools/</InstallUrl>
+    <UpdateUrl>http://www.offthechartradio.co.uk/files/djs/software/djtools/</UpdateUrl>
+    <TargetCulture>en-GB</TargetCulture>
+    <ProductName>OTC DJ Toolbox</ProductName>
+    <PublisherName>Off The Chart Radio</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>22</ApplicationRevision>
+    <ApplicationVersion>2.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>OTC DJ Toolbox.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>OTC DJ Toolbox.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bass.Net, Version=2.4.6.0, Culture=neutral, PublicKeyToken=b7566c273e6ef480, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompMan.Designer.vb">
+      <DependentUpon>CompMan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CompMan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DJMail.Designer.vb">
+      <DependentUpon>DJMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DJMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtraInfo.Designer.vb">
+      <DependentUpon>ExtraInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExtraInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandoverHelper.Designer.vb">
+      <DependentUpon>HandoverHelper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HandoverHelper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enclosure.Designer.vb">
+      <DependentUpon>Enclosure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Enclosure.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Minibar.Designer.vb">
+      <DependentUpon>Minibar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Minibar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinibarExtra.Designer.vb">
+      <DependentUpon>MinibarExtra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinibarExtra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Options.Designer.vb">
+      <DependentUpon>Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaylistLogger.Designer.vb">
+      <DependentUpon>PlaylistLogger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlaylistLogger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaylistLogger_Gen.Designer.vb">
+      <DependentUpon>PlaylistLogger_Gen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlaylistLogger_Gen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaylistLogger_Manual.Designer.vb">
+      <DependentUpon>PlaylistLogger_Manual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlaylistLogger_Manual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaylistLogger_Search.Designer.vb">
+      <DependentUpon>PlaylistLogger_Search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlaylistLogger_Search.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaylistLogger_Select.Designer.vb">
+      <DependentUpon>PlaylistLogger_Select.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlaylistLogger_Select.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreRecMon.Designer.vb">
+      <DependentUpon>PreRecMon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PreRecMon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerStatus.Designer.vb">
+      <DependentUpon>ServerStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ServerStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="StatusChange.Designer.vb">
+      <DependentUpon>StatusChange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StatusChange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeCalculator.Designer.vb">
+      <DependentUpon>TimeCalculator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TimeCalculator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TOTHClock.Designer.vb">
+      <DependentUpon>TOTHClock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TOTHClock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebcamUploader.Designer.vb">
+      <DependentUpon>WebcamUploader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WebcamUploader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompMan.resx">
+      <DependentUpon>CompMan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DJMail.resx">
+      <DependentUpon>DJMail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtraInfo.resx">
+      <DependentUpon>ExtraInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandoverHelper.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HandoverHelper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enclosure.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Enclosure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Minibar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Minibar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinibarExtra.resx">
+      <DependentUpon>MinibarExtra.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistLogger.resx">
+      <DependentUpon>PlaylistLogger.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistLogger_Gen.resx">
+      <DependentUpon>PlaylistLogger_Gen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistLogger_Manual.resx">
+      <DependentUpon>PlaylistLogger_Manual.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistLogger_Search.resx">
+      <DependentUpon>PlaylistLogger_Search.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistLogger_Select.resx">
+      <DependentUpon>PlaylistLogger_Select.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreRecMon.resx">
+      <DependentUpon>PreRecMon.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusChange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatusChange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimeCalculator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TOTHClock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TOTHClock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebcamUploader.resx">
+      <DependentUpon>WebcamUploader.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <BaseApplicationManifest Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="OTC DJ Tools_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bass.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="laser.ico" />
+    <Content Include="tags.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\bass.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\bass.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\red_grad_whitecorners_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
